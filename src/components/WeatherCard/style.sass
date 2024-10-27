@@ -1,0 +1,41 @@
+.weather-card
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 300px
+    min-width: 580px
+    width: max-content
+    height: 200px
+    background-color: #ffffff30
+    border-radius: 20px
+    margin: 0 auto
+    padding: 0 30px
+    &__info, &__details
+        display: flex
+        flex-direction: column
+        height: 80%
+        box-sizing: border-box
+    &__info
+        padding-top: 15px
+    &__details
+        text-align: right
+        .weather-card__additional-param
+            justify-content: right
+    &__city
+        font-size: 40px
+        font-weight: 700
+    &__temperature
+        font-size: 60px
+        font-weight: 900
+    &__city, &__temperature
+        margin: 0
+    &__status
+        font-size: 16px
+        font-weight: 300
+    &__additional-param
+        display: flex
+        align-items: center
+        gap: 10px
+        margin-top: auto
+    &__wind, &__humidity
+        font-size: 13px
