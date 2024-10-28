@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Weather Forecast
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Check out the live demo here](https://axixe.github.io/weather-forecast).
 
-## Available Scripts
+This project is a simple weather forecast website built using React. It allows users to get the current weather and a 5-day forecast for different cities. The data is fetched from the [WeatherAPI](https://www.weatherapi.com/), and the application is styled using Sass.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Real-time Weather Data**: Get up-to-date weather information using the WeatherAPI.
+- **5-Day Forecast**: See the forecast for the next 5 days.
+- **Responsive Design**: The application is fully responsive, adapting to different screen sizes.
+- **Context API**: Used for state management to manage global data in the app.
+- **Sass for Styling**: Styles are written in Sass, allowing for better organization and maintainability of the CSS.
+- **Local Storage**: Stores the selected city for future visits.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The project uses several core technologies and concepts from React, including:
 
-### `npm test`
+1. **React Functional Components**: The app is built using functional components to create a modular and reusable codebase.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Hooks**:
+   - `useState` for state management.
+   - `useEffect` for managing side effects, such as fetching data.
 
-### `npm run build`
+3. **Context API**:
+   - Used to manage and share state across multiple components without having to pass props manually.
+   - Allows for centralizing the management of weather data and other global states.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Error Handling**:
+   - Proper error handling for network requests to display user-friendly messages in case of errors.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. **Prop Drilling vs Context API**:
+   - Instead of passing data through multiple components (prop drilling), the Context API is used for managing global state, making the codebase cleaner and easier to maintain.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Additional Libraries
 
-### `npm run eject`
+- **Sass (Syntactically Awesome Stylesheets)**: Used for better structuring and organizing the CSS with variables, nesting, and mixins.
+- **WeatherAPI**: Fetching real-time weather data.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run this project locally, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   git clone https://github.com/axixe/weather-forecast.git
+   ```
 
-## Learn More
+2. Navigate to the project directory:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   cd weather-forecast
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Install the dependencies:
 
-### Code Splitting
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Run the development server:
 
-### Analyzing the Bundle Size
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application will open in your default browser at `http://localhost:3000`.
 
-### Making a Progressive Web App
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To deploy the project to GitHub Pages, use the following steps:
 
-### Advanced Configuration
+1. Make sure you have configured the repository for GitHub Pages.
+2. Build and deploy the project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```bash
+   npm run build
+   npm run deploy
+   ```
 
-### Deployment
+This will build the project and push it to the `gh-pages` branch, making it accessible at [https://axixe.github.io/weather-forecast](https://axixe.github.io/weather-forecast).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## File Structure
 
-### `npm run build` fails to minify
+The project follows a modular folder structure:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `src/components`: Contains the React components for the application.
+- `src/context`: Holds the context and state management logic.
+- `src/service`: Contains API-related services, including functions to fetch weather data.
+- `src/styles`: Includes the Sass files for styling.
+- `public`: Contains static assets and the `index.html` file.
+
+## Future Enhancements
+
+Possible improvements and features to add:
+
+- **Unit and Integration Testing**: Implement testing using Jest and React Testing Library.
+- **Additional Weather Details**: Include more weather details such as wind speed, humidity, and UV index.
+- **Dark Mode**: Add support for a dark theme.
+- **Multi-language Support**: Allow the app to support multiple languages for a wider audience.
