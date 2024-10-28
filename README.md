@@ -68,20 +68,6 @@ To run this project locally, follow these steps:
 
 The application will open in your default browser at `http://localhost:3000`.
 
-## Deployment
-
-To deploy the project to GitHub Pages, use the following steps:
-
-1. Make sure you have configured the repository for GitHub Pages.
-2. Build and deploy the project:
-
-   ```bash
-   npm run build
-   npm run deploy
-   ```
-
-This will build the project and push it to the `gh-pages` branch, making it accessible at [https://axixe.github.io/weather-forecast](https://axixe.github.io/weather-forecast).
-
 ## File Structure
 
 The project follows a modular folder structure:
@@ -89,7 +75,6 @@ The project follows a modular folder structure:
 - `src/components`: Contains the React components for the application.
 - `src/context`: Holds the context and state management logic.
 - `src/service`: Contains API-related services, including functions to fetch weather data.
-- `src/styles`: Includes the Sass files for styling.
 - `public`: Contains static assets and the `index.html` file.
 
 ## Future Enhancements
