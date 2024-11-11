@@ -25,7 +25,6 @@ export default function WeatherDay() {
     useEffect(() => {
         if (saveData) {
             fetchWeatherData();
-            // toggleSaveData();
         }
     }, [saveData, toggleSaveData]);    
     

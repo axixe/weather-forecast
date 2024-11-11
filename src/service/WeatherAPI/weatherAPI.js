@@ -1,4 +1,4 @@
-const apiKey = 'c5ae7fcb86c8427ba1d91415242710',
+const apiKey = '88e6ab4add21476c925170707241111',
       request = `https://api.weatherapi.com/v1`;
 
 const createUrl = (type, query) => `${request}/${type}.json?key=${apiKey}&q=${query}`;
